@@ -57,4 +57,73 @@ class Store extends CI_Controller
     {
         $this->load->view('new/index');
     }
+        /* FUNCTION: Concerning Login */
+    function login($para1 = "", $para2 = "")
+        {
+    
+            
+            $page_data['page_name'] = "login";
+    
+            $this->load->library('form_validation');
+            if ($para1 == "do_login") {
+                $this->form_validation->set_rules('email', 'Email', 'required');
+                $this->form_validation->set_rules('password', 'Password', 'required');
+    
+                if ($this->form_validation->run() == FALSE)
+                {
+                    echo validation_errors();
+                }
+                else
+                {
+                    $signin_data = $this->db->get_where('user', array(
+                        'email' => $this->input->post('email'),
+                        'password' => sha1($this->input->post('password'))
+                    ));
+                    if ($signin_data->num_rows() > 0) {
+                        foreach ($signin_data->result_array() as $row) {
+                            $this->session->set_userdata('user_login', 'yes');
+                            $this->session->set_userdata('user_id', $row['user_id']);
+                            $this->session->set_userdata('user_name', $row['username']);
+                            $this->session->set_flashdata('alert', 'successful_signin');
+                            $this->db->where('user_id', $row['user_id']);
+                            $this->db->update('user', array(
+                                'last_login' => time()
+                            ));
+                            echo 'done';
+                        }
+                    } else {
+                        echo 'failed';
+                    }
+                }
+            } else if ($para1 == 'forget') {
+                $this->load->library('form_validation');
+                $this->form_validation->set_rules('email', 'Email', 'required');
+    
+                if ($this->form_validation->run() == FALSE)
+                {
+                    echo validation_errors();
+                }
+                else
+                {
+                    $query = $this->db->get_where('user', array(
+                        'email' => $this->input->post('email')
+                    ));
+                    if ($query->num_rows() > 0) {
+                        $user_id          = $query->row()->user_id;
+                        $password         = substr(hash('sha512', rand()), 0, 12);
+                        $data['password'] = sha1($password);
+                        $this->db->where('user_id', $user_id);
+                        $this->db->update('user', $data);
+                        if ($this->email_model->password_reset_email('user', $user_id, $password)) {
+                            echo 'email_sent';
+                        } else {
+                            echo 'email_not_sent';
+                        }
+                    } else {
+                        echo 'email_nay';
+                    }
+                }
+            }
+            //$this->load->view('front/index', $page_data);
+        }
 }

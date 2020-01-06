@@ -534,7 +534,7 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <h1 class="display-3 text-white">arckipel</h1>
                     <p class="lead text-1">Software & interactive solutions</p>
-                    <a href="store.html" class="dx-btn dx-btn-lg mt-10">View Products</a>
+                    <a href="<?php echo base_url(); ?>home" class="dx-btn dx-btn-lg mt-10">View Products</a>
                 </div>
             </div>
         </div>
@@ -1051,24 +1051,34 @@
     <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
     <div class="dx-signin-content dx-signin text-center">
         <h1 class="h3 text-white mb-30">Log In</h1>
+        <?php 
+                    echo form_open(base_url() . 'store/login/do_login/', array(
 
-        <form action="#" class="dx-form">
+                        'class' => 'dx-form',
+
+                        'method' => 'post',
+
+                        'id' => ''
+
+                    ));
+
+        ?>
             <div class="dx-form-group-md">
                 <a href="account.html" class="dx-btn dx-btn-block dx-btn-popup dx-btn-envato d-flex align-items-center justify-content-center">
-                    <span class="fas fa-leaf mr-20"></span><span>Log in with Envato</span>
+                    <span class="fas fa-leaf mr-20"></span><span><?php echo base_url();?></span>
                 </a>
             </div>
             <div class="dx-form-group-md">
                 <div class="dx-signin-or">OR</div>
             </div>
             <div class="dx-form-group-md">
-                <input type="text" class="form-control form-control-style-4" placeholder="Username Or Email">
+                <input class="form-control form-control-style-4" type="email" name="email" placeholder="<?php echo translate('email');?>">
             </div>
             <div class="dx-form-group-md">
-                <input type="password" class="form-control form-control-style-4" placeholder="Password">
+                <input type="password" class="form-control form-control-style-4" name="password" placeholder="<?php echo translate('password');?>">
             </div>
             <div class="dx-form-group-md">
-                <a href="account.html" class="dx-btn dx-btn-block dx-btn-popup">Log In</a>
+                <input type="submit" class="dx-btn dx-btn-block dx-btn-popup" value="Log In">
             </div>
             <div class="dx-form-group-md">
                 <div class="d-flex justify-content-between">
@@ -1150,6 +1160,10 @@
 
     
 <!-- START: Scripts -->
+<script src="<?php echo base_url(); ?>template/front/js/bootstrap-notify.min.js"></script>
+
+<script src="<?php echo base_url(); ?>template/front/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>template/front/modal/js/jquery.active-modals.js"></script>
 
 <!-- Object Fit Images -->
 <script src="assets/vendor/object-fit-images/dist/ofi.min.js"></script>
@@ -1158,7 +1172,6 @@
 <script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
 
 <!-- Bootstrap -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Fancybox -->
 <script src="assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
@@ -1201,6 +1214,7 @@
 <script src="assets/js/amdesk.min.js"></script>
 <script src="assets/js/amdesk-init.js"></script>
 <!-- END: Scripts -->
+
 
 
     
