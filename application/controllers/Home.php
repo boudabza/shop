@@ -47,9 +47,9 @@ class Home extends CI_Controller
         }
         $this->config->cache_query();
         $currency = $this->session->userdata('currency');
-        if(!isset($currency)){
-            $this->session->set_userdata('currency',$this->db->get_where('business_settings', array('type' => 'home_def_currency'))->row()->value);
-        }
+        // if(!isset($currency)){
+        //     $this->session->set_userdata('currency',$this->db->get_where('business_settings', array('type' => 'home_def_currency'))->row()->value);
+        // }
         setcookie('lang', $this->session->userdata('language'), time() + (86400), "/");
         setcookie('curr', $this->session->userdata('currency'), time() + (86400), "/");
         //echo $_COOKIE['lang'];
