@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Name: AmDesk - Help Center HTML template for your digital products
-    Version: 1.0.1
-    Author: dexad, nK
-    Website: https://nkdev.info/
-    Purchase: https://themeforest.net/user/_nk/portfolio
-    Support: https://nk.ticksy.com/
-    License: You must have a valid license purchased only from ThemeForest (the above link) in order to legally use the theme for your project.
-    Copyright 2019.
--->
-    
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -21,7 +10,7 @@
     <meta name="keywords" content="helpdesk, forum, template, HTML template, responsive, clean">
     <meta name="author" content="nK">
 
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/images/favicon.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -31,40 +20,40 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700%7cMaven+Pro:400,500,700" rel="stylesheet"><!-- %7c -->
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/vendor/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Fancybox -->
-    <link rel="stylesheet" href="assets/vendor/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/vendor/fancybox/dist/jquery.fancybox.min.css">
 
     <!-- Pe icon 7 stroke -->
-    <link rel="stylesheet" href="assets/vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
 
     <!-- Swiper -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/swiper/dist/css/swiper.min.css">
 
     <!-- Bootstrap Select -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
 
     <!-- Dropzone -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/dropzone/dist/min/dropzone.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/dropzone/dist/min/dropzone.min.css">
 
     <!-- Quill -->
-    <link rel="stylesheet" type="text/css" href="assets/vendor/quill/dist/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/quill/dist/quill.snow.css">
 
     <!-- Font Awesome -->
-    <script defer src="assets/vendor/fontawesome-free/js/all.js"></script>
-    <script defer src="assets/vendor/fontawesome-free/js/v4-shims.js"></script>
+    <script defer src="<?php echo base_url()?>assets/vendor/fontawesome-free/js/all.js"></script>
+    <script defer src="<?php echo base_url()?>assets/vendor/fontawesome-free/js/v4-shims.js"></script>
 
     <!-- Amdesk -->
-    <link rel="stylesheet" href="assets/css/amdesk.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/amdesk.css">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom.css">
     
     <!-- END: Styles -->
 
     <!-- jQuery -->
-    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo base_url()?>assets/vendor/jquery/dist/jquery.min.js"></script>
     
     
 </head>
@@ -89,7 +78,7 @@
     <div class="container">
         
         <a href="index.html" class="dx-nav-logo">
-            <img src="assets/images/logo.svg" alt="" width="88px">
+            <img src="<?php echo base_url()?><?php echo base_url()?>assets/images/logo.svg" alt="" width="88px">
         </a>
         
 
@@ -276,7 +265,7 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row" class="dx-table-checkout-img">
-                                            <a href="product.html"><img src="assets/images/product-1-sm.png" alt=""></a>
+                                            <a href="product.html"><img src="<?php echo base_url()?>assets/images/product-1-sm.png" alt=""></a>
                                         </th>
                                         <td class="dx-table-checkout-title">
                                             <a href="product.html">Sensific – Saying Beast Lesser for in Fruitful</a>
@@ -290,7 +279,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="row" class="dx-table-checkout-img">
-                                            <a href="product.html"><img src="assets/images/product-2-sm.png" alt=""></a>
+                                            <a href="product.html"><img src="<?php echo base_url()?>assets/images/product-2-sm.png" alt=""></a>
                                         </th>
                                         <td class="dx-table-checkout-title">
                                             <a href="product.html">Minist – Subdue Above for Signs Dry is Have Great</a>
@@ -317,7 +306,7 @@
                 <li>
                     <div class="dropdown dx-dropdown dx-dropdown-signin">
                         <a class="dx-nav-signin" href="account.html" role="button" id="dropdownSignin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="dx-nav-signin-img"><img src="assets/images/avatar-1.png" alt=""></span>
+                            <span class="dx-nav-signin-img"><img src="<?php echo base_url()?>assets/images/avatar-1.png" alt=""></span>
                             <span class="dx-nav-signin-name">John Leonard</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownSignin">
@@ -518,7 +507,7 @@
                 <li>
                     <span>
                         <a class="dx-nav-signin" href="account.html">
-                            <span class="dx-nav-signin-img"><img src="assets/images/avatar-1.png" alt=""></span>
+                            <span class="dx-nav-signin-img"><img src="<?php echo base_url()?>assets/images/avatar-1.png" alt=""></span>
                             <span class="dx-nav-signin-name">John Leonard</span>
                         </a>
                     </span>
@@ -544,7 +533,7 @@
 <header class="dx-header dx-box-5">
     <div class="container">
         <div class="bg-image bg-image-parallax">
-            <img src="assets/images/bg-header-5.png" class="jarallax-img" alt="">
+            <img src="<?php echo base_url()?>assets/images/bg-header-5.png" class="jarallax-img" alt="">
             <div style="background-color: rgba(27, 27, 27, .8);"></div>
         </div>
 
@@ -586,7 +575,7 @@
 <a href="single-ticket.html" class="dx-ticket-item dx-ticket-new dx-ticket-open dx-block-decorated">
     <span class="dx-ticket-img">
         
-        <img src="assets/images/avatar-1.png" alt="">
+        <img src="<?php echo base_url()?>assets/images/avatar-1.png" alt="">
         
     </span>
     <span class="dx-ticket-cont">
@@ -618,7 +607,7 @@
 <a href="single-ticket.html" class="dx-ticket-item dx-ticket-closed dx-block-decorated">
     <span class="dx-ticket-img">
         
-        <img src="assets/images/avatar-default.svg" alt="">
+        <img src="<?php echo base_url()?>assets/images/avatar-default.svg" alt="">
         
     </span>
     <span class="dx-ticket-cont">
@@ -665,7 +654,7 @@
                 
 <a href="product.html" class="dx-portfolio-item dx-portfolio-item-style-2 dx-block-decorated">
     <span class="dx-portfolio-item-img">
-        <img src="assets/images/product-1-sm.png" alt="">
+        <img src="<?php echo base_url()?>assets/images/product-1-sm.png" alt="">
     </span>
     <span class="dx-portfolio-item-title">Quantial – Moving Upon Signs Moveth Lesser</span>
 </a>
@@ -675,7 +664,7 @@
                 
 <a href="product.html" class="dx-portfolio-item dx-portfolio-item-style-2 dx-block-decorated">
     <span class="dx-portfolio-item-img">
-        <img src="assets/images/product-2-sm.png" alt="">
+        <img src="<?php echo base_url()?>assets/images/product-2-sm.png" alt="">
     </span>
     <span class="dx-portfolio-item-title">Sensific – Saying Beast Lesser for in Fruitful</span>
 </a>
@@ -685,7 +674,7 @@
                 
 <a href="product.html" class="dx-portfolio-item dx-portfolio-item-style-2 dx-block-decorated">
     <span class="dx-portfolio-item-img">
-        <img src="assets/images/product-3-sm.png" alt="">
+        <img src="<?php echo base_url()?>assets/images/product-3-sm.png" alt="">
     </span>
     <span class="dx-portfolio-item-title">Minist – Subdue Above for Signs Dry is Have Great</span>
 </a>
@@ -695,7 +684,7 @@
                 
 <a href="product.html" class="dx-portfolio-item dx-portfolio-item-style-2 dx-block-decorated">
     <span class="dx-portfolio-item-img">
-        <img src="assets/images/product-4-sm.png" alt="">
+        <img src="<?php echo base_url()?>assets/images/product-4-sm.png" alt="">
     </span>
     <span class="dx-portfolio-item-title">Desty – She&#39;d Under Light Over Multiply Stars Winged</span>
 </a>
@@ -705,7 +694,7 @@
                 
 <a href="product.html" class="dx-portfolio-item dx-portfolio-item-style-2 dx-block-decorated">
     <span class="dx-portfolio-item-img">
-        <img src="assets/images/product-5-sm.png" alt="">
+        <img src="<?php echo base_url()?>assets/images/product-5-sm.png" alt="">
     </span>
     <span class="dx-portfolio-item-title">Silies – Grass Living Fly Subdue After Fruitful</span>
 </a>
@@ -728,7 +717,7 @@
 <div class="dx-widget-footer">
     <div class="dx-widget-title">
         <a href="index.html" class="dx-widget-logo">
-            <img src="assets/images/logo.svg" alt="" width="88px">
+            <img src="<?php echo base_url()?>assets/images/logo.svg" alt="" width="88px">
         </a>
     </div>
     <div class="dx-widget-text">
@@ -921,54 +910,54 @@
 <!-- START: Scripts -->
 
 <!-- Object Fit Images -->
-<script src="assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/object-fit-images/dist/ofi.min.js"></script>
 
 <!-- Popper -->
-<script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/popper.js/dist/umd/popper.min.js"></script>
 
 <!-- Bootstrap -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Fancybox -->
-<script src="assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
 
 <!-- Cleave -->
-<script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/cleave.js/dist/cleave.min.js"></script>
 
 <!-- Validator -->
-<script src="assets/vendor/validator/validator.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/validator/validator.min.js"></script>
 
 <!-- Sticky Kit -->
-<script src="assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
 
 <!-- Jarallax -->
-<script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
-<script src="assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
 
 <!-- Isotope -->
-<script src="assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
 
 <!-- ImagesLoaded -->
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
 <!-- Swiper -->
-<script src="assets/vendor/swiper/dist/js/swiper.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/swiper/dist/js/swiper.min.js"></script>
 
 <!-- Gist Embed -->
-<script src="assets/vendor/gist-embed/gist-embed.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/gist-embed/gist-embed.min.js"></script>
 
 <!-- Bootstrap Select -->
-<script src="assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
 <!-- Dropzone -->
-<script src="assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 
 <!-- Quill -->
-<script src="assets/vendor/quill/dist/quill.min.js"></script>
+<script src="<?php echo base_url()?>assets/vendor/quill/dist/quill.min.js"></script>
 
 <!-- The Amdesk -->
-<script src="assets/js/amdesk.min.js"></script>
-<script src="assets/js/amdesk-init.js"></script>
+<script src="<?php echo base_url()?>assets/js/amdesk.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/amdesk-init.js"></script>
 <!-- END: Scripts -->
 
 

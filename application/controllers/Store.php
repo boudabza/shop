@@ -54,24 +54,58 @@ class Store extends CI_Controller
 
     /* FUNCTION: Loads Homepage*/
     public function index()
-    {
+    {    
         $this->load->view('new/index');
     }
+    public function account()
+    {    
+        $this->load->view('new/account');
+    }
         /* FUNCTION: Concerning Login */
-    function login($para1 = "", $para2 = "")
+    function login($para1 = '', $para2 = '', $para3 = '')
         {
     
-            
+            if ($this->session->userdata('user_login') == "yes") {
+                redirect(base_url().'home/profile', 'refresh');
+            }
+            if($this->crud_model->get_settings_value('general_settings','captcha_status','value') == 'ok'){
+                $this->load->library('recaptcha');
+            }
+            $this->load->library('form_validation');
+
+            $page_data    = array();
             $page_data['page_name'] = "login";
     
-            $this->load->library('form_validation');
+            if ($para1 == '') {
+                $page_data['page_name'] = "user/login";
+                $page_data['asset_page'] = "login";
+                $page_data['page_title'] = translate('login');
+                if($para2 == 'modal'){
+                    $page_data['page'] = $para3;
+                    $this->load->view('front/user/login/quick_modal', $page_data);
+                } else {
+                    $this->load->view('front/index', $page_data);
+                }
+            } elseif ($para1 == 'registration') {
+                if($this->crud_model->get_settings_value('general_settings','captcha_status','value') == 'ok'){
+                    $page_data['recaptcha_html'] = $this->recaptcha->render();
+                }
+                $page_data['page_name'] = "user/register";
+                $page_data['asset_page'] = "register";
+                $page_data['page_title'] = translate('registration');
+                if($para2 == 'modal'){
+                    $this->load->view('front/user/register/index', $page_data);
+                } else {
+                    $this->load->view('front/index', $page_data);
+                }
+            }
             if ($para1 == "do_login") {
                 $this->form_validation->set_rules('email', 'Email', 'required');
                 $this->form_validation->set_rules('password', 'Password', 'required');
     
                 if ($this->form_validation->run() == FALSE)
                 {
-                    echo validation_errors();
+                    redirect(base_url().'store', 'refresh');
                 }
                 else
                 {
@@ -89,10 +123,10 @@ class Store extends CI_Controller
                             $this->db->update('user', array(
                                 'last_login' => time()
                             ));
-                            echo 'done';
+                            redirect(base_url().'home/profile', 'refresh');
                         }
                     } else {
-                        echo 'failed';
+                        redirect(base_url().'store', 'refresh');
                     }
                 }
             } else if ($para1 == 'forget') {
